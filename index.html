@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="login-card">
+      <h2>Login</h2>
+      <h3>Enter your credentials</h3>
+      <form class="login-form">
+        <input
+          spellcheck="false"
+          class="control"
+          type="text"
+          placeholder="Username"
+        />
+        <div class="password">
+          <input
+            spellcheck="false"
+            class="control"
+            id="password"
+            type="password"
+            placeholder="Password"
+          />
+          <button
+            class="toggle"
+            type="button"
+            onclick="togglePassword(this)"
+          ></button>
+        </div>
+        <button class="control" type="button">LOGIN</button>
+        <a href="#">Forgot your credentials?</a>
+      </form>
+    </div>
+  <!-- custom js -->
+  <script>
+    const togglePassword = (button) => {
+      button.classList.toggle("showing");
+      const input = document.getElementById("password");
+      input.type = input.type === "password" ? "text" : "password";
+   };
+  </script>
+  </body>
+</html>
